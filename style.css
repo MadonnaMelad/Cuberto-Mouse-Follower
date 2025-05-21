@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Dela+Gothic+One&family=Poppins:wght@400;500;600;700;800;900&family=Roboto+Condensed:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+    min-height: 100vh;
+    font-family: "Poppins",sans-serif;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+main{
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+nav a{
+    text-decoration: none;
+    color: #0080ff;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 28px;
+}
+nav span{
+    font-size: 22px;
+    color: #fff;
+    background: #000;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    display: flex;
+    font-size: 80px;
+    font-family: "Dela Gothic One", sans-serif;
+    gap: 30px;
+    position: relative;
+}
+.heading::before{
+    content: "We make it happen";
+    font-family: "Poppins",sans-serif;
+    position: absolute;
+    font-size: 16px;
+    top: 20px;
+    color: #0080ff;
+}
+.heading-text{
+    position: relative;
+    height: 30vh;
+    display: grid;
+    place-content: center;
+}
+.heading-text span{
+    -webkit-text-stroke: 2px #000;
+    color: #fff;
+    mix-blend-mode: exclusion;
+}
+img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    scale: 0;
+}
+.container p{
+    font-size: 20px;
+    padding: 0 60px;
+    line-height: 1.8;
+}
+.container p span{
+    font-size: 50px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #0080ff;
+}
+.cursor{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #000;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 40px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .heading::before {
+    font-size: 14px;
+    top: -20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .heading-text {
+    height: auto;
+    padding: 10px;
+  }
+
+  .container p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .container p span {
+    font-size: 30px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 22px;
+  }
+
+  nav span {
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .container p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .container p span {
+    font-size: 24px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  nav span {
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+  }
+}
+
+
+
+#toggle-mode {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  color: #000;
+}
+
+#toggle-mode:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  background-color: #111;
+  color: #fff;
+}
+
+.dark-mode nav a {
+  color: #00bfff;
+}
+
+.dark-mode nav span {
+  background: #fff;
+  color: #000;
+}
+
+.dark-mode .heading::before {
+  color: #00bfff;
+}
+
+.dark-mode .container p span {
+  color: #00bfff;
+}
+
+.dark-mode .cursor {
+  background: #fff;
+}
+
+.dark-mode #toggle-mode {
+  color: #fff;
+}
+
+
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav span {
+  font-size: 22px;
+  color: #fff;
+  background: #000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.dark-mode nav span {
+  background: #fff;
+  color: #000;
+}
+
