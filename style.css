@@ -11,9 +11,7 @@ body{
     font-family: "Poppins",sans-serif;
     overflow-x: hidden;
 }
-::-webkit-scrollbar{
-    display: none;
-}
+
 main{
     width: 100%;
     height: 100%;
@@ -68,10 +66,12 @@ nav span{
 .heading-text{
     position: relative;
     height: 30vh;
-    display: grid;
+    display: inline-block;
     place-content: center;
 }
 .heading-text span{
+    position: relative;
+    z-index: 10;
     -webkit-text-stroke: 2px #000;
     color: #fff;
     mix-blend-mode: exclusion;
@@ -86,7 +86,7 @@ img{
     border-radius: 50%;
     z-index: -1;
     opacity: 0;
-    scale: 0;
+    scale: 0;pointer-events: none;
 }
 .container p{
     font-size: 20px;
@@ -114,11 +114,11 @@ img{
 
 @media (max-width: 768px) {
   .heading {
-    font-size: 40px;
+    font-size: 36px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .heading::before {
@@ -134,18 +134,20 @@ img{
   }
 
   .container p {
-    font-size: 16px;
+    font-size: 18px;
     padding: 0 20px;
+    line-height: 1.6;
   }
 
   .container p span {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   nav {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    padding: 10px 15px;
   }
 
   nav a {
@@ -242,18 +244,6 @@ img{
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-nav span {
-  font-size: 22px;
-  color: #fff;
-  background: #000;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-  cursor: pointer;
 }
 
 .dark-mode nav span {

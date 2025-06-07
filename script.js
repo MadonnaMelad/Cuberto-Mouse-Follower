@@ -4,7 +4,7 @@ var main = document.querySelector("main")
 main.addEventListener("mousemove",(e)=>{
     gsap.to(cursor,{
         x:e.x,
-        y:e.x,
+        y:e.y,
         opacity:1,
     });
 });
